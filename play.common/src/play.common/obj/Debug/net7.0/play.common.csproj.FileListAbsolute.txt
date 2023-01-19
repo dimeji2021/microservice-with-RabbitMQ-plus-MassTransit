@@ -1,0 +1,12 @@
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\bin\Debug\net7.0\play.common.deps.json
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\bin\Debug\net7.0\play.common.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\bin\Debug\net7.0\play.common.pdb
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.csproj.AssemblyReference.cache
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.AssemblyInfoInputs.cache
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.AssemblyInfo.cs
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.csproj.CoreCompileInputs.cache
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\refint\play.common.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\play.common.pdb
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\obj\Debug\net7.0\ref\play.common.dll

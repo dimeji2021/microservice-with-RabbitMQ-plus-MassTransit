@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>play.common</id>
+    <version>1.0.1</version>
+    <authors>play.common</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="MassTransit.AspNetCore" version="7.3.1" exclude="Build,Analyzers" />
+        <dependency id="MassTransit.RabbitMQ" version="8.0.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="7.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver" version="2.18.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.common\src\play.common\bin\Debug\net7.0\play.common.dll" target="lib\net7.0\play.common.dll" />
+  </files>
+</package>
