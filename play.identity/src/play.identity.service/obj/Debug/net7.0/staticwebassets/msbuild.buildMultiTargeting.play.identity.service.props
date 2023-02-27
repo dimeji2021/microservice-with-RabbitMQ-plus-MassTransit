@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\play.identity.service.props" />
+</Project>

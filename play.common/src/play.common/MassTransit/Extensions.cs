@@ -24,12 +24,11 @@ namespace play.common.MassTransit
                     configurator.ConfigureEndpoints(context, new KebabCaseEndpointNameFormatter(serviceSettings.ServiceName, false));
                     configurator.UseMessageRetry(retryConfigurator =>
                     {
-                        retryConfigurator.Interval(3,TimeSpan.FromSeconds(5));
+                        retryConfigurator.Interval(3, TimeSpan.FromSeconds(5));
                     });
                 });
             });
             return services;
-            // builder.Services.AddMassTransitHostedService();
         }
     }
 }
