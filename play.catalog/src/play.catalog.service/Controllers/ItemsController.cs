@@ -1,4 +1,5 @@
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using play.catalog.contracts;
 using play.catalog.service.Dtos;
@@ -8,7 +9,8 @@ using play.common;
 namespace play.catalog.service.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")] //[Route("items")]
+    [Route("api/[controller]")]
+    [Authorize]
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<Item> _itemsRepository;

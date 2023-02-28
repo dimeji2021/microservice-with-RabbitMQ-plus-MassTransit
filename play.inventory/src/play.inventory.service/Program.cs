@@ -1,3 +1,4 @@
+using play.common.Identity;
 using play.common.MassTransit;
 using play.common.MongoDB;
 using play.inventory.service.Clients;
@@ -15,7 +16,8 @@ builder.Services.AddControllers();
 builder.Services.AddMongo()
     .AddMongoRepository<InventoryItem>("Inventoryitems")
     .AddMongoRepository<CatalogItem>("Inventoryitems")
-    .AddMassTransitWithRabbitMq();
+    .AddMassTransitWithRabbitMq()
+    .AddJwtBearerAuthentication();
 
 AddCatalogClient(builder);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -38,7 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

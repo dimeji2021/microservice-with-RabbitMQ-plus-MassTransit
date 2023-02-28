@@ -54,3 +54,10 @@ C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\MassTransit.RabbitMqTransport.dll
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\play.catalog.contracts.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.inventory\src\play.inventory.service\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

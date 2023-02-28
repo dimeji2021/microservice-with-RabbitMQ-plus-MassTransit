@@ -52,3 +52,10 @@ C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.c
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\play.catalog.contracts.pdb
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\MassTransit.AspNetCoreIntegration.dll
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.catalog\src\play.catalog.service\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

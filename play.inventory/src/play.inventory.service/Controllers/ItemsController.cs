@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using play.common;
 using play.inventory.service.Clients;
@@ -8,6 +9,7 @@ namespace play.inventory.service.Controller
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<InventoryItem> _inventoryItemsRepository;

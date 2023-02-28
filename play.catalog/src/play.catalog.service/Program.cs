@@ -1,17 +1,25 @@
-using MassTransit;
 using play.catalog.service.Entities;
 using play.common.MongoDB;
-// using Microsoft.Extensions.DependencyInjection;
 using play.common.MassTransit;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using play.common.Settings;
+using play.common.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 var configValue = builder.Configuration.GetSection("AllowedOrigin").Get<string[]>();
+var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
 // Add services to the container.
 
 builder.Services.AddMongo()
     .AddMongoRepository<Item>("items")
-    .AddMassTransitWithRabbitMq();
+    .AddMassTransitWithRabbitMq()
+    .AddJwtBearerAuthentication();
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    // .AddJwtBearer(options =>
+    // {
+        // options.Authority = "https://localhost:7211";
+        // options.Audience = serviceSettings.ServiceName;
+    // });
 builder.Services.AddControllers(options =>
 {
     options.SuppressAsyncSuffixInActionNames = false;
@@ -37,9 +45,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

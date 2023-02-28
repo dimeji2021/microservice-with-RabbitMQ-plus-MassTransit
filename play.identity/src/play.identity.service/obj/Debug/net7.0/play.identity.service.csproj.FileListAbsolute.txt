@@ -275,3 +275,14 @@ C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\IdentityModel.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\IdentityServer4.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\IdentityServer4.AspNetIdentity.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\IdentityServer4.Storage.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Kehinde Aregbesola\Desktop\microservice-project\play.identity\src\play.identity.service\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
