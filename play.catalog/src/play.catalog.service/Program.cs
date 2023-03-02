@@ -1,7 +1,6 @@
 using play.catalog.service.Entities;
 using play.common.MongoDB;
 using play.common.MassTransit;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using play.common.Settings;
 using play.common.Identity;
 

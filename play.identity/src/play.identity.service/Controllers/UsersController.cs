@@ -1,12 +1,15 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using play.identity.service.Dtos;
 using play.identity.service.Entities;
+using static IdentityServer4.IdentityServerConstants;
 
 namespace play.identity.service.Contoller
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Policy = LocalApi.PolicyName, Roles = "Admin")]
     public class UsersController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;

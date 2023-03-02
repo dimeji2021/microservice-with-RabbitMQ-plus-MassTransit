@@ -1,7 +1,7 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using play.common;
-using play.inventory.service.Clients;
 using play.inventory.service.Dtos;
 using play.inventory.service.Entities;
 
@@ -9,7 +9,6 @@ namespace play.inventory.service.Controller
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<InventoryItem> _inventoryItemsRepository;
@@ -35,9 +34,18 @@ namespace play.inventory.service.Controller
             {
                 return BadRequest();
             }
+            var currentUserId = User.FindFirstValue("sub");
+            if (Guid.Parse(currentUserId) != userId)
+            {
+            if (!User.IsInRole("Admin"))
+            {
+            return Unauthorized();
+            }
+            }
             var inventoryItemEntities = await _inventoryItemsRepository.GetAllItemsAsync(item => item.UserId == userId);
             var ItemIds = inventoryItemEntities.Select(item => item.CatalogItemId); // Get the ID of all items
             var catalogItemEntities = await _catalogItemsRepository.GetAllItemsAsync(item => ItemIds.Contains(item.Id));
+
             var inventoryItemDto = inventoryItemEntities.Select(inventoryItem =>
             {
                 var catalogItem = catalogItemEntities.Single(catalogItem => catalogItem.Id == inventoryItem.CatalogItemId);
@@ -46,6 +54,7 @@ namespace play.inventory.service.Controller
             return Ok(inventoryItemDto);
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PostAsync(GrantItemDto grantItemDto)
         {
             var inventoryItem = await _inventoryItemsRepository.GetItemsAsync(item =>

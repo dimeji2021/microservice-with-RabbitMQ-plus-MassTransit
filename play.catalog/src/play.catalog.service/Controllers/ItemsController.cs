@@ -10,7 +10,7 @@ namespace play.catalog.service.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<Item> _itemsRepository;
