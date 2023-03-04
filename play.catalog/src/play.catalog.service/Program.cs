@@ -3,6 +3,7 @@ using play.common.MongoDB;
 using play.common.MassTransit;
 using play.common.Settings;
 using play.common.Identity;
+using play.catalog.service;
 
 var builder = WebApplication.CreateBuilder(args);
 var configValue = builder.Configuration.GetSection("AllowedOrigin").Get<string[]>();
@@ -14,11 +15,25 @@ builder.Services.AddMongo()
     .AddMassTransitWithRabbitMq()
     .AddJwtBearerAuthentication();
 // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    // .AddJwtBearer(options =>
-    // {
-        // options.Authority = "https://localhost:7211";
-        // options.Audience = serviceSettings.ServiceName;
-    // });
+// .AddJwtBearer(options =>
+// {
+// options.Authority = "https://localhost:7211";
+// options.Audience = serviceSettings.ServiceName;
+// });
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(Policies.Read, policy =>
+    {
+        policy.RequireRole("Admin");
+        policy.RequireClaim("scope", "catalog.readaccess", "catalog.fullaccess");
+    });
+
+    options.AddPolicy(Policies.Write, policy =>
+    {
+        policy.RequireRole("Admin");
+        policy.RequireClaim("scope", "catalog.writeaccess", "catalog.fullaccess");
+    });
+});
 builder.Services.AddControllers(options =>
 {
     options.SuppressAsyncSuffixInActionNames = false;

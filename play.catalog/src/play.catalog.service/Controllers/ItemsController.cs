@@ -10,7 +10,6 @@ namespace play.catalog.service.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles ="Admin")]
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<Item> _itemsRepository;
@@ -21,16 +20,19 @@ namespace play.catalog.service.Controllers
             _publishEndpoint = publishEndpoint;
         }
         [HttpGet]
+        [Authorize(Policies.Read)]
         public async Task<IActionResult> GetAsync()
         {
             return Ok((await _itemsRepository.GetAllItemsAsync()).Select(item => item.AsDto()));
         }
         [HttpGet("{id:Guid}")]
+        [Authorize(Policies.Read)]
         public async Task<IActionResult> GetAsync(Guid id)
         {
             return Ok((await _itemsRepository.GetItemsAsync(id)).AsDto());
         }
         [HttpPost]
+        [Authorize(Policies.Write)]
         public async Task<IActionResult> PostAsync(CreatedItemDto createdItemDto)
         {
             var item = new Item
@@ -46,6 +48,7 @@ namespace play.catalog.service.Controllers
             return CreatedAtAction(nameof(GetAsync), new { id = item.Id }, item);
         }
         [HttpPut("{id:Guid}")]
+        [Authorize(Policies.Write)]
         public async Task<IActionResult> Put(Guid id, UpdatedItemDto updatedItemDto)
         {
             var existingItem = await _itemsRepository.GetItemsAsync(id);
@@ -61,6 +64,7 @@ namespace play.catalog.service.Controllers
             return NotFound();
         }
         [HttpDelete("{id:Guid}")]
+        [Authorize(Policies.Write)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var existingItem = await _itemsRepository.GetItemsAsync(id);
